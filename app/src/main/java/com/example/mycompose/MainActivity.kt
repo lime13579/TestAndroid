@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -43,25 +46,13 @@ private fun MyApp(modifier: Modifier = Modifier) {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Surface(color = MaterialTheme.colorScheme.primary) {
+        Box (modifier = modifier.padding(24.dp)) {
         Text(
-            text = "Hlloo $name!",
-            modifier = Modifier.padding(24.dp)
+            text = "Hello $name!"
+        )
+        Text(
+            text = "world"
         )
     }
+    }
 }
-
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview() {
-//    MyComposeTheme {
-//        Greeting("Android")
-//    }
-//}
-
-//@Preview(showBackground = true)
-//@Composable
-//fun secondPreview() {
-//    MyComposeTheme {
-//        Greeting("name")
-//    }
-//}
